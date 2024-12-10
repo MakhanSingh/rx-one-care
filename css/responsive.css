@@ -1,0 +1,112 @@
+@media (max-width:1570px) {
+    /*==================== 03. About Page CSS ====================*/
+    /*----- 03.c. Contact Section -----*/
+    .ms-contact-section .ms-right-content {
+        padding: 60px;
+    }
+}
+
+@media (max-width:991px) {
+    .ms-content-section {
+        padding: 80px 0 50px !important;
+    }
+    .ms-article-box {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:767px) {
+    /*==================== 01. General CSS ====================*/
+    h1 {
+        font-size:50px;
+    }
+    h2 {
+        font-size: 38px;
+    }
+    h3 {
+        font-size: 31px;
+    }
+    h4 {
+        font-size: 23px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+
+    /*==================== 05. Book Appointment Page CSS ====================*/
+    /*----- 05.b. Appointment Section -----*/
+    .ms-doctors .ms-left-border {
+        border: none;
+        padding-left: 10px;
+        padding-top: 15px;
+    }
+    .ms-doctors .ms-doc-img {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+    }
+    .ms-doctors .ms-btn {
+        width: 100%;
+        text-align: center;
+        padding: 7px 15px;
+    }
+    .ms-doctors p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:550px) {
+    /*==================== 01. General CSS ====================*/
+    h1 {
+        font-size:42px;
+    }
+    h2 {
+        font-size: 34px;
+    }
+    h3 {
+        font-size: 29px;
+    }
+
+    /*==================== 02. Homepage CSS ====================*/
+    /*----- 02.a. Banner Section -----*/
+    .ms-home-banner {
+        padding: 100px 10px;
+    }
+    /*----- 02.b. Stand Apart Section -----*/
+    .ms-apart-section {
+        padding: 60px 10px;
+    }
+    .ms-apart-section .ms-icon-box {
+        background-position: -55%;
+    }
+    /*----- 02.c. Connect Section -----*/
+    .ms-connect-section {
+        padding: 60px 10px;
+    }
+    /*----- 02.d. Top Articles Section -----*/
+    .ms-article-section {
+        padding: 60px 10px 30px;
+    }
+    .ms-article-box {
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+    /*----- 02.e. Testimonials Section -----*/
+    .ms-testimonial-section {
+        padding: 55px 0;
+    }
+    .ms-arrow-icon {
+        width: 35px !important;
+        height: 35px;
+        padding: 11px;
+    }
+
+    /*==================== 03. About Page CSS ====================*/
+    /*----- 03.c. Contact Section -----*/
+    .ms-contact-section .ms-right-content {
+        padding: 60px 20px;
+    }
+    .ms-contact-section iframe {
+        height: 500px;
+    }
+}

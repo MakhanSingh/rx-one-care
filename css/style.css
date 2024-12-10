@@ -1,0 +1,741 @@
+@charset "UTF-8";
+/*====================Table Of Contents===================
+
+01. General CSS
+    a. Header Section
+    b. Footer Section
+02. Home Page CSS
+    a. Banner Section
+    b. Stand Apart Section
+    c. Connect Section
+    d. Top Articles Section
+    e. Testimonials Section
+03. About Page CSS
+    a. Banner Section
+    b. Team Section
+    c. Contact Section
+04. For Providers Page CSS
+    a. Banner Section
+    b. Request Demo Section
+05. Book Appointment Page CSS
+    a. Banner Section
+    b. Appointment Section
+
+========================================================*/
+
+/*==================== 01. General CSS ====================*/
+:root {
+    --ms-primary-color:#005c74;
+    --ms-second-color:#01cab8;
+    --ms-third-color:#858585;
+    --ms-dark-color:#212529;
+    --ms-second-font:'Poppins';
+}
+a {
+    text-decoration: none;
+    transition: 0.3s all linear;
+}
+a:hover {
+    color: var(--ms-second-color);
+}
+body {
+    font-family: var(--ms-second-font);
+    font-size: 17px;
+    line-height: 1.55em;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.35em;
+    font-family: 'Montserrat', sans-serif;
+}
+h1 {
+    font-size: 56px;
+    color: var(--ms-primary-color);
+}
+h2 {
+    font-size: 42px;
+}
+h3 {
+    font-size: 34px;
+}
+h4 {
+    font-size: 26px;
+}
+h5 {
+    font-size: 22px;
+}
+h6 {
+    font-size: 19px;
+    line-height: 1.65em;
+}
+.ms-font-poppins {
+    font-family: var(--ms-second-font);
+}
+.ms-primary-color {
+    color: var(--ms-primary-color);
+}
+.ms-second-color {
+    color: var(--ms-second-color);
+}
+.ms-third-color {
+    color: var(--ms-third-color);
+}
+.ms-dark-color {
+    color: var(--ms-dark-color);
+}
+.ms-font-weight-600 {
+    font-weight: 600;
+}
+.ms-primary-btn, .ms-secondary-btn {
+    position: relative;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 14px 30px;
+    border-radius: 30px;
+    z-index: 1;
+    transition: all 500ms ease;
+}
+.ms-primary-btn:before, .ms-secondary-btn:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    transform: scale(0,0);
+    transition: all 500ms ease;
+}
+.ms-primary-btn {
+    color: var(--ms-primary-color);
+    background: #fff;
+    border:2px solid #fff;
+}
+.ms-primary-btn:before {
+    background: var(--ms-primary-color);
+}
+.ms-primary-btn:hover {
+    background: var(--ms-primary-color);
+    color: #fff;
+    border:2px solid var(--ms-primary-color);
+}
+.ms-primary-btn:hover:before,
+.ms-secondary-btn:hover:before {
+    transform: scale(1,1);
+}
+.ms-secondary-btn {
+    background: var(--ms-primary-color);
+    border:2px solid var(--ms-primary-color);
+    color: #fff !important;
+}
+.ms-secondary-btn:before {
+    background: var(--ms-second-color);
+}
+.ms-secondary-btn:hover {
+    background: var(--ms-second-color);
+    border: 2px solid var(--ms-second-color);
+    color:#fff;
+}
+.ms-border-rounded {
+    border-radius: 30px;
+}
+form .form-control:focus {
+    box-shadow: none;
+}
+form input,
+form textarea {
+    padding:16px 20px !important;
+    border-radius: 30px !important;
+}
+/*----- 01.a. Header Section -----*/
+.ms-main-header {
+    position: absolute;
+    width: 100%;
+}
+.ms-main-header .navbar-brand img {
+    width: 200px;
+    transition: 0.3s all linear;
+}
+.ms-main-header nav ul li a {
+    color: #333;
+    font-weight: 500;
+    font-size: 17px;
+    margin: 0 18px;
+    transition: 0.3s all linear;
+}
+.ms-main-header nav ul li a.active, 
+.ms-main-header nav ul li a:hover {
+    color: var(--ms-primary-color);
+}
+.ms-main-header .ms-header-btn {
+    padding: 12px 40px;
+}
+.ms-main-header .ms-line-slide a {
+    position: relative;
+}
+.ms-main-header .ms-line-slide a:before,
+.ms-main-header .ms-line-slide a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom:-4px;
+    height: 2px;
+    width: 0;
+    transition: width 0s ease;
+}
+.ms-main-header .ms-line-slide a:before {
+    left: 0;
+}
+.ms-main-header .ms-line-slide a:after {
+    right: 0;
+    background: var(--ms-primary-color);
+    transition: width .5s ease;
+}
+.ms-main-header .ms-line-slide a:hover:before {
+    width: 100%;
+    background: var(--ms-primary-color);
+    transition: width .5s ease;
+}
+.ms-main-header .ms-line-slide a:hover:after {
+    width: 100%;
+    background: transparent;
+}
+/*---------- hamburger menu css ----------*/
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+.menu_toggle {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+    display: block;
+}  
+.menu_toggle .hamburger {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+#homepage-one .menu_toggle .hamburger span, 
+#homepage-one .menu_toggle .hamburger-cross span {
+    background: #fff;
+}
+.menu_toggle .hamburger span {
+    width: 0%;
+    height: 2px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 4px 0;
+    display: block;
+    background: #091e3f;
+    border-radius: 3px;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.menu_toggle .hamburger span:nth-child(1) {
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.menu_toggle .hamburger span:nth-child(2) {
+    -webkit-transition-delay: .125s;
+    -o-transition-delay: .125s;
+    transition-delay: .125s;
+}
+.menu_toggle .hamburger span:nth-child(3) {
+    -webkit-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    transition-delay: .2s;
+}
+.menu_toggle .hamburger-cross {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: block;
+}
+.menu_toggle .hamburger-cross span {
+    display: block;
+    background: #091e3f;
+    border-radius: 3px;
+    -webkit-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+.menu_toggle .hamburger-cross span:nth-child(1) {
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    -webkit-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+}
+.menu_toggle .hamburger-cross span:nth-child(2) {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    -webkit-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+.collapsed .menu_toggle .hamburger span {
+    width: 100%;
+}
+.collapsed .menu_toggle .hamburger span:nth-child(1) {
+    -webkit-transition-delay: .3s;
+    -o-transition-delay: .3s;
+    transition-delay: .3s;
+}
+.collapsed .menu_toggle .hamburger span:nth-child(2) {
+    -webkit-transition-delay: .4s;
+    -o-transition-delay: .4s;
+    transition-delay: .4s;
+}
+.collapsed .menu_toggle .hamburger span:nth-child(3) {
+    -webkit-transition-delay: .5s;
+    -o-transition-delay: .5s;
+    transition-delay: .5s;
+}
+.collapsed .menu_toggle .hamburger-cross span:nth-child(1) {
+    height: 0%;
+    -webkit-transition-delay: 0s;
+    -o-transition-delay: 0s;
+    transition-delay: 0s;
+}
+.collapsed .menu_toggle .hamburger-cross span:nth-child(2) {
+    width: 0%;
+    -webkit-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    transition-delay: .2s;
+}
+
+/* Mobile Nav CSS */
+.collapse:not(.show) {
+    display: block;
+}
+@media (max-width:992px) {
+    header .ms-nav {
+        background:#fff;
+        border-radius: 10px;
+        padding: 15px 0;
+    }
+    header .ms-nav ul li {
+        margin-bottom: 10px;
+    }
+    .ms-main-header .ms-header-btn {
+        padding: 10px 35px;
+    }
+}
+
+/*----- 01.b. Footer Section -----*/
+.ms-main-footer {
+    padding: 80px 0 0;
+    background:url('../images/footer-bg-img.png') bottom center;
+}
+.ms-main-footer p {
+    font-size: 16px;
+}
+.ms-main-footer .ms-footer-links a {
+    color:#fff;
+    font-size: 16px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+.ms-main-footer .ms-footer-links a:before {
+    background: #fff;
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 1px;
+    left: 0px;
+    bottom: 0px;
+    transition: all 500ms ease;
+}
+.ms-main-footer .ms-footer-links a:hover:before {
+    width: 100%;
+}
+.ms-main-footer .ms-seperator {
+    width: 70px;
+    height: 1px;
+    background: #fff;
+    margin-bottom: 25px;
+}
+.ms-main-footer .ms-social-links a {
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--ms-primary-color);
+    margin: 0 3px;
+    border: 1px solid #fff;
+}
+.ms-main-footer .ms-social-links a:hover {
+    background: var(--ms-primary-color);
+    color: #fff;
+}
+.ms-bottom-footer {
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/*==================== 02. Homepage CSS ====================*/
+/*----- 02.a. Banner Section -----*/
+.ms-home-banner {
+    background:  url('../images/sliderimg.png'), url('../images/banner-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 95% 100%, center;
+    background-size: 55%, cover;
+    height: 100vh;
+}
+.ms-home-banner .ms-check-icon {
+    font-size: 20px;
+    position: relative;
+    top: 6px;
+    color: var(--ms-second-color);
+}
+.ms-home-banner h6 {
+    color: #212529;
+    opacity: 0.8;
+    font-family: var(--ms-second-font);
+}
+/*----- 02.b. Stand Apart Section -----*/
+.ms-apart-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #fff, #f6f7f8);
+}
+.ms-apart-section .ms-icon-box {
+    padding:50px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px #eaf2f1;
+    transition: all 500ms ease;
+    text-align: center;
+    min-height: 260px;
+    background:url('../images/icon-back-img.png') rgba(255,255,255,1);
+    background-repeat: no-repeat;
+    background-position:-15%;
+}
+.ms-apart-section .ms-icon-box img {
+    width: 80px;
+}
+.ms-apart-section .ms-icon-box h5 {
+    font-size: 18px;
+    line-height: 1.5em;
+}
+.ms-apart-section .ms-icon-box.active {
+    min-height: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/*----- 02.c. Connect Section -----*/
+.ms-content-section {     
+    padding: 80px 0;
+    background: url('../images/background-img.png') no-repeat bottom center rgba(255,255,255,0.6);
+    background-blend-mode: overlay;
+}
+.ms-bg-img {
+    background: url('../images/bg-img-rotate.png') no-repeat top center rgba(255,255,255,0.6);
+    background-blend-mode: overlay;
+}
+.ms-no-img {
+    background: none;
+}
+.ms-content-section .ms-check-icon {
+    color: var(--ms-second-color);
+    position: relative;
+    top: 4px;
+    font-size: 20px;
+}
+.ms-content-section h6 {
+    color: var(--ms-third-color);
+    line-height: 1.65em;
+    font-size: 18px;
+    font-family: var(--ms-second-font);
+}
+/*----- 02.d. Top Articles Section -----*/
+.ms-article-section {
+    padding: 80px 0;
+    background: #f6f6f6;
+}
+.ms-article-box {
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px #eaf2f1;
+    transition: 0.3s all linear;
+}
+.ms-article-box:hover {
+    box-shadow: 0 10px 30px rgb(0 0 0 / 15%);
+}
+.ms-article-box .ms-featured-img img {
+    transition: 0.3s all linear;
+}
+.ms-article-box .ms-featured-img:before {
+    background: var(--ms-primary-color);
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 0%;
+    left: 0px;
+    top: 0px;
+    opacity: 0.8;
+    z-index: 1;
+    transition: all 500ms ease;
+}
+.ms-article-box:hover .ms-featured-img:before {
+    height: 100%;
+}
+.ms-article-box:hover .ms-featured-img img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.ms-article-content {
+    padding: 30px;
+}
+.ms-category-meta {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 99;
+}
+.ms-category-meta a {
+    background: var(--ms-second-color);
+    font-size: 14px;
+    color: #fff;
+    padding: 7px 15px;
+    border-radius: 10px;
+}
+.ms-author-meta img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.ms-author-meta p {
+    color: #2d2929;
+    font-size: 15px;
+    font-weight: 600;
+}
+.ms-description p {
+    font-size: 15px;
+    color: var(--ms-third-color);
+}
+.ms-description a {
+    font-size: 16px;
+}
+.ms-description a:before, .ms-description a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    width: 0;
+    transition: width 0s ease;
+}
+.ms-description a:before {
+    left: 0;
+}
+.ms-description a:after {
+    right: 0;
+    background: var(--ms-primary-color);
+    transition: width .5s ease;
+}
+.ms-description a:hover {
+    color: var(--ms-primary-color);
+}
+.ms-description a:hover:before {
+    width: 100%;
+    background: var(--ms-primary-color);
+    transition: width .5s ease;
+}
+.ms-description a:hover:after {
+    width: 100%;
+    background: transparent;
+}
+/*----- 02.e. Testimonials Section -----*/
+.ms-testimonial-section {
+    padding: 80px 0;
+}
+.ms-arrow-icon {
+    background: var(--ms-primary-color);
+    color: #fff;
+    width: 45px !important;
+    height: 45px;
+    border-radius: 50%;
+    padding: 11px;
+    cursor: pointer;
+    transition: 0.3s all linear;
+}
+.ms-arrow-icon:hover {
+    background: var(--ms-second-color);
+}
+
+/*==================== 03. About Page CSS ====================*/
+/*----- 03.a. Banner Section -----*/
+.ms-about-banner {
+    padding:180px 10px 110px;
+    background: var(--ms-second-color);
+}
+.ms-page-header-title {
+    color: #fff;
+    font-weight: 600;
+}
+/*----- 03.b. Team Section -----*/
+.ms-team-section {
+    padding:80px 10px;
+}
+.ms-team-box img {
+    border-radius: 50%;
+    width: 200px;
+}
+.ms-team-box h6 {
+    font-size: 17px;
+}
+.ms-team-box p {
+    font-size: 16px;
+    color: var(--ms-third-color);
+}
+@media (min-width:992px) {
+    .ms-team-section .col-md-4:nth-child(2) {
+        border-left: 1px solid #e3e3e3;
+        border-right: 1px solid #e3e3e3;
+    }
+}
+/*----- 03.c. Contact Section -----*/
+.ms-contact-section {
+    background: #f6f7f8;
+}
+.ms-contact-section .ms-right-content {
+    padding: 60px 150px 60px 60px;
+    background: url('../images/background-img.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+}
+.ms-contact-section .ms-social-links a {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 3px;
+    border: 1px solid var(--ms-primary-color);
+}
+.ms-contact-section .ms-social-links a .ms-icon {
+    font-size: 20px;
+}
+.ms-contact-section .ms-social-links a:hover {
+    background: var(--ms-second-color);
+    border: 1px solid var(--ms-second-color);
+}
+.ms-contact-section iframe {
+    width: 100%;
+    height: 776px;
+    margin-bottom: -7px;
+}
+
+/*==================== 04. For Providers Page CSS ====================*/
+/*----- 04.a. Banner Section -----*/
+.ms-providers-banner {
+    background-color: var(--ms-second-color);
+    padding: 130px 10px;
+}
+/*----- 04.b. Request Demo Section -----*/
+.ms-request-demo-section {
+    background: #f6f7f8;
+    padding: 80px 10px;
+}
+.ms-form-layout button {
+    width: 100%;
+}
+@media (min-width:767px) {
+    form.ms-form-layout input {
+        padding-right: 200px !important;
+    }
+    form.ms-form-layout button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: auto;
+    }
+}
+
+/*==================== 05. Book Appointment Page CSS ====================*/
+/*----- 05.a. Banner Section -----*/
+.ms-book-banner {
+    background-color: var(--ms-second-color);
+    padding:180px 10px 110px;
+}
+/*----- 05.b. Appointment Section -----*/
+.ms-appointment-section {
+    background: #f6f7f8;
+    padding: 70px 10px;
+}
+.ms-appointment-section select {
+    border-radius: 30px;
+    padding:5px 10px;
+    font-size: 14px;
+    color: var(--ms-third-color);
+    border: 1px solid #e1e1e1;
+}
+.ms-doctors .ms-doc-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.ms-doctors p {
+    font-size: 15px;
+    color:var(--ms-third-color);
+}
+.ms-doctors {
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 5px 0 rgb(188 188 188 / 20%);
+}
+.ms-doctors .ms-left-border {
+    border-left: 1px solid #e1e1e1;
+    padding-left: 20px;
+}
+.ms-doctors .ms-btn {
+    font-size: 15px;
+    padding: 8px 20px;
+}
+.ms-doctors .ms-icon {
+    min-width: 15px;
+}
+.ms-sort-txt {
+    font-size: 14px;
+}
+@media (min-width:991px) {
+    .ms-doctors .ms-left-border {
+        border-left: 1px solid #e1e1e1;
+        padding-left: 30px;
+    }
+}
+@media (max-width:991px) {
+    .ms-no-border {
+        border:none !important;
+    }
+    .ms-doctors .ms-left-border {
+        border-top:1px solid #e1e1e1 !important;
+        padding:20px;
+    }
+}
